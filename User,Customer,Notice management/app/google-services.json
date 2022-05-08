@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "882550369366",
+    "project_id": "droidx-mad-59eab",
+    "storage_bucket": "droidx-mad-59eab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882550369366:android:636a9a2692099704735ff7",
+        "android_client_info": {
+          "package_name": "com.example.droidx_mad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882550369366-pn1nlhnjvd6htkkmtc7uded72ha994sp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqI6q7uKEVrpU2nxKRLm7N-4STE6j79aE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882550369366-pn1nlhnjvd6htkkmtc7uded72ha994sp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
