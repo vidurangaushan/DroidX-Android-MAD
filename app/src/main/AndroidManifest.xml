@@ -10,6 +10,47 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DroidXMAD">
         <activity
+            android:name=".Payment_Details"
+            android:exported="false" />
+        <activity
+            android:name=".DrawerBase"
+            android:exported="false" />
+        <activity
+            android:name=".Others"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/bottomnav" />
+
+        <activity
+            android:name=".Notice1"
+            android:exported="false" />
+        <activity
+            android:name=".Notice"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
+            android:name=".ServiceM"
+            android:exported="false" />
+        <activity
+            android:name=".ServiceM3"
+            android:exported="false" />
+        <activity
+            android:name=".ServiceM2"
+            android:exported="false" />
+        <activity
+            android:name=".Success_Pay"
+            android:exported="false" />
+        <activity
+            android:name=".Confirm_payment"
+            android:exported="false" />
+        <activity
+            android:name=".Enter_Pay_Details"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

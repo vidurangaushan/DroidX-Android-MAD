@@ -1,3 +1,36 @@
 <resources>
-    <string name="app_name">DroidX-MAD</string>
+    <string name="app_name" translatable="false">DroidX-MAD</string>
+    <string name="text1">Enter Your Payment Details</string>
+    <string name="name">Name</string>
+    <string name="card">Card Number</string>
+    <string name="exdate">Expiry Date</string>
+    <string name="cvv">CVV</string>
+    <string name="savecard">Save Card Details</string>
+    <string name="confbtn">Confirm</string>
+    <string name="textarea">Text Area</string>
+    <string name="amount">Rs 10000.00</string>
+    <string name="adminview">Admin View</string>
+    <string name="sevise">Service 1</string>
+    <string name="sprovider">Service Provider</string>
+    <string name="adbt">ADD</string>
+    <string name="rembt">REMOVE</string>
+    <string name="upbt">UPDATE</string>
+    <string name="check">Check New Service Provider</string>
+    <string name="rname">Name:-</string>
+    <string name="rcat">Category:-</string>
+    <string name="rdesc">Description:-</string>
+    <string name="rloca">Available Location:-</string>
+    <string name="Enme">Joe Alex</string>
+    <string name="categ" />
+    <string name="locst" />
+    <string name="ediname" />
+    <string name="popular">Popular Services</string>
+    <string name="welc">Welcome!!</string>
+    <string name="spinner">spinner</string>
+    <string name="amhint">Rs. 1000.00</string>
+    <string name="month">month</string>
+    <string name="search">Search</string>
+    <string name="terms_condition"><![CDATA[Terms & Condition]]></string>
+    <string name="menu_drawer_open">Drawer Open</string>
+    <string name="menu_drawer_close">Drawer Close</string>
 </resources>
