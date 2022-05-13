@@ -1,17 +1,23 @@
 package com.example.droidx_mad;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.MissingResourceException;
 
 public class PayAdapter extends RecyclerView.Adapter<PayAdapter.MyViewHolder>  {
 
@@ -41,8 +47,9 @@ public class PayAdapter extends RecyclerView.Adapter<PayAdapter.MyViewHolder>  {
 
         Payment payment = list.get(position);
         holder.name.setText(payment.getName());
-        holder.amount.setText(payment.getAmount());
+
     }
+    
 
     @Override
     public int getItemCount() {
@@ -92,12 +99,16 @@ public class PayAdapter extends RecyclerView.Adapter<PayAdapter.MyViewHolder>  {
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
         TextView name, amount;
+        
+        Button paydelete;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             name = itemView.findViewById(R.id.pname);
             amount = itemView.findViewById(R.id.pamount);
+
+
 
         }
     }

@@ -76,7 +76,7 @@ public class ServiceM extends DrawerBase {
         //Bottom Navigation Bar
         try {
             bottomNavigationView = findViewById(R.id.bottom_navigator);
-            bottomNavigationView.setSelectedItemId(R.id.othernv);
+            bottomNavigationView.setSelectedItemId(R.id.servicenv);
 
             bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -90,8 +90,6 @@ public class ServiceM extends DrawerBase {
                             return true;
 
                         case R.id.servicenv:
-                            startActivity(new Intent(getApplicationContext(), ServiceM.class));
-                            overridePendingTransition(1, 0);
                             return true;
 
                         case R.id.notifinv:
@@ -136,7 +134,7 @@ public class ServiceM extends DrawerBase {
         SearchView searchView = (SearchView)item.getActionView();
 
 
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+       searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 txtSearch(query);
