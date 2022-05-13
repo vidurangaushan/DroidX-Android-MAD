@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Confirm_payment">
+
+
+    <TextView
+        android:id="@+id/texthead"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:text="Get Your Payment Details"
+        android:textColor="#070707"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btncalculate"
+        android:layout_width="121dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/purple_200"
+        android:text="CALCULATE"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:iconTint="#F44336"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editmonth"
+        app:rippleColor="#EFEFED" />
+
+    <Button
+        android:id="@+id/btnpay"
+        android:layout_width="121dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/purple_200"
+        android:text="PAY"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:iconTint="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paydetails" />
+
+    <TextView
+        android:id="@+id/textpay"
+        android:layout_width="247dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:text="How many months do you need to pay,"
+        android:textColor="#913232"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texthead" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="116dp"
+        android:hint="Rs 1000.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editmonth" />
+
+    <TextView
+        android:id="@+id/textamount"
+        android:layout_width="91dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="88dp"
+        android:text="Amount :-"
+        android:textColor="#101010"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName4"
+        app:layout_constraintHorizontal_bias="0.732"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editmonth" />
+
+    <view
+        android:id="@+id/paydetails"
+        class="androidx.appcompat.widget.ActionMenuView"
+        android:layout_width="383dp"
+        android:layout_height="308dp"
+        android:layout_marginTop="24dp"
+        android:background="#20CBC1D8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texthead" />
+
+
+
+    <EditText
+        android:id="@+id/editmonth"
+        android:layout_width="85dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="1"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.251"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textpay" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigator"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/purple_200"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav" />
+</androidx.constraintlayout.widget.ConstraintLayout>

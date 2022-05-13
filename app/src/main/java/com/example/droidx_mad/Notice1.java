@@ -23,7 +23,7 @@ public class Notice1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(Notice1.this, MainActivity.class);
+                Intent intent = new Intent(Notice1.this, Success_Pay.class);
                 startActivity(intent);
             }
         });
