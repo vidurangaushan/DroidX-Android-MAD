@@ -66,7 +66,7 @@ public class ServiceAllAdapter extends FirebaseRecyclerAdapter<ServiceAll,Servic
                         .setExpanded(true, 1400)
                         .create();
 
-                dialogPlus.show();
+                //dialogPlus.show();
 
                 View view = dialogPlus.getHolderView();
 
