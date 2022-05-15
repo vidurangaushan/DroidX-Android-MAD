@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:text="Update"
                 android:textAllCaps="false"
-                android:backgroundTint="@color/purple_200"
+                android:backgroundTint="#FF5722"
                 android:layout_marginRight="5dp"
                 android:id="@+id/serupdate"/>
 
@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:text="Delete"
                 android:textAllCaps="false"
-                android:backgroundTint="@color/purple_200"
+                android:backgroundTint="#FF5722"
                 android:layout_marginLeft="5dp"
                 android:id="@+id/serdelete"/>
         </LinearLayout>
