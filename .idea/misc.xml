@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/DroidX-Android-MAD/app/src/main/res/drawable/selector.xml" value="0.112" />
+        <entry key="..\:/AndroidStudioProjects/DroidX-Android-MAD/app/src/main/res/layout/activity_confirm_payment.xml" value="0.1033434650455927" />
+        <entry key="..\:/AndroidStudioProjects/DroidX-Android-MAD/app/src/main/res/layout/activity_enter_pay_details.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/DroidX-Android-MAD/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/DroidX-Android-MAD/app/src/main/res/layout/activity_service_m.xml" value="0.2033514492753623" />
         <entry key="..\:/AndroidStudioProjects/DroidX-Android-MAD/app/src/main/res/layout/activity_success_pay.xml" value="0.25" />

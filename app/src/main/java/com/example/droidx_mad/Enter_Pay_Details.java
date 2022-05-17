@@ -31,6 +31,8 @@ public class Enter_Pay_Details extends DrawerBase {
      private DbHandler dbHandler;
      Payment payment;
      DatabaseReference dbrefpay;
+     String n1;
+     float rst;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +92,7 @@ public class Enter_Pay_Details extends DrawerBase {
         cvv = findViewById(R.id.editTextNumberPassword);
         button = findViewById(R.id.btnConfirm);
         context = this;
+
 
        payment = new Payment();
 

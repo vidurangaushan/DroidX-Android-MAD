@@ -63,6 +63,8 @@ public class Confirm_payment extends DrawerBase {
 
                 Intent intent = new Intent(Confirm_payment.this, Enter_Pay_Details.class);
                 startActivity(intent);
+
+               // intent.putExtra("rst",result);
             }
         });
 
@@ -74,9 +76,17 @@ public class Confirm_payment extends DrawerBase {
 
                     result = (float) (numb1 * 998.50);
                     rst.setText(String.valueOf(result));
+
+
                 }
 
         });
+    }
+
+    float numb2 = 998.5F;
+    public  float  multiply(float numb1, float numb2){
+        rst.setText((int) (numb1*numb2));
+        return (float) (numb1*numb2);
     }
 
    // private void setContentView(int activity_confirm_payment) {}
