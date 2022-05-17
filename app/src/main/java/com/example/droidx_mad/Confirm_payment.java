@@ -20,9 +20,7 @@ public class Confirm_payment extends DrawerBase {
     Button b4;
     TextView rst;
     EditText N1;
-   // EditText N2;
 
-    //int numb1, numb2;
     float result,numb1;
 
 
@@ -39,7 +37,7 @@ public class Confirm_payment extends DrawerBase {
        // N2=findViewById(R.id.spinnerpay);
 
         ActionBar actionBar = getSupportActionBar();
-        //actionBar.setTitle(" ");
+
 
             //spinner
 
@@ -72,15 +70,12 @@ public class Confirm_payment extends DrawerBase {
             @Override
             public void onClick(View v) {
 
-                //numb1=Integer.parseInt(N1.getText().toString());
-                //numb2=Integer.parseInt(N2.getText().toString());
+                numb1 = Float.parseFloat(N1.getText().toString());
 
-                numb1=Float.parseFloat(N1.getText().toString());
-                //numb2=Float.parseFloat(N2.getText().toString());
+                    result = (float) (numb1 * 998.50);
+                    rst.setText(String.valueOf(result));
+                }
 
-                result= (float) (numb1*998.50);
-                rst.setText(String.valueOf(result));
-            }
         });
     }
 
@@ -93,5 +88,7 @@ public class Confirm_payment extends DrawerBase {
         return true;
     }
 
-  //  private MenuInflater getMenuInflater() { };
+
+
+    //  private MenuInflater getMenuInflater() { };
 }

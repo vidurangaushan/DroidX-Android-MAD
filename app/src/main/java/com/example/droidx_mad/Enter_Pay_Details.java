@@ -112,16 +112,18 @@ public class Enter_Pay_Details extends DrawerBase {
                 payment.setName(name.getText().toString().trim());
                 payment.setAmount(amount.getText().toString().trim());
 
-                dbrefpay.push().setValue(payment);
-
-                Toast.makeText(getApplicationContext(), "Successful!",Toast.LENGTH_SHORT).show();
-
 
                 if (isAllFieldsChecked[0] == true) {
+                    dbrefpay.push().setValue(payment);
+                    Toast.makeText(getApplicationContext(), "Successful!",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Enter_Pay_Details.this, Success_Pay.class);
                     startActivity(new Intent(context,Success_Pay.class));
                     return;
                 }
+                else{
+                    Toast.makeText(getApplicationContext(), "Unsuccessful!",Toast.LENGTH_SHORT).show();
+                }
+
 
 
 
