@@ -7,27 +7,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class update extends AppCompatActivity {
+public class QuestionC extends AppCompatActivity {
 
     Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update);
-
-        setTitle("Delete Details");
+        setContentView(R.layout.activity_question_c);
 
         button = (Button) findViewById(R.id.button2);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                // insertRegisterData();
-                Intent intent = new Intent(update.this,service.class);
-                startActivity(intent);
+            public void onClick(View v) {
+                Intent intentLoadNewActivity = new Intent(QuestionC.this,Cleaners.class);
+                startActivity(intentLoadNewActivity);
 
             }
         });
+
     }
 }

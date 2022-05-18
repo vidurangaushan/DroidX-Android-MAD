@@ -8,7 +8,7 @@ public class Register {
     String nc;
     String ct;
 
-    public Register(String s, String name, String mail, String mob, String nc, String ct) {
+    public Register(String s, String name, String mail, String mob, String nc) {
         this.name = name;
         this.mail = mail;
         this.mob = mob;

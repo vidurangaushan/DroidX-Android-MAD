@@ -4,13 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class provider extends AppCompatActivity {
+public class Cleaners extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_provider);
-
-        setTitle("Plumbers");
+        setContentView(R.layout.activity_cleaners);
     }
 }

@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">HANSANI</string>
     <string name="title_activity_location">location</string>
+    <string name="services">services</string>
+    <string name="err_name">Enter Valid Name</string>
+    <string name="err_email">Enter Valid Email</string>
+    <string name="err_mobile">Enter Valid Mobile Number</string>
+    <string name="err_city">Enter Alphabetical Word</string>
 </resources>
