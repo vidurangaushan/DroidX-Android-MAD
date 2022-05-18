@@ -54,7 +54,7 @@ public class Success_Pay extends AppCompatActivity {
                             return true;
 
                         case R.id.notifinv:
-                            startActivity(new Intent(getApplicationContext(), Notice.class));
+                            startActivity(new Intent(getApplicationContext(), Payment_Details.class));
                             overridePendingTransition(0, 0);
                             return true;
 

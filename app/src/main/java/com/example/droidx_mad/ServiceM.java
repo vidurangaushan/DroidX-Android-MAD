@@ -154,7 +154,7 @@ public class ServiceM extends DrawerBase {
 
         FirebaseRecyclerOptions<ServiceAll> options =
                 new FirebaseRecyclerOptions.Builder<ServiceAll>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Save").orderByChild("name").startAt(str).endAt(str + "~"), ServiceAll.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Save").orderByChild("category").startAt(str).endAt(str + "~"), ServiceAll.class)
                         .build();
 
         serviceAllAdapter = new ServiceAllAdapter(options);
