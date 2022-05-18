@@ -1,4 +1,5 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name" translatable="false">DroidX-MAD</string>
     <string name="text1">Enter Your Payment Details</string>
     <string name="name">Name</string>
@@ -33,4 +34,21 @@
     <string name="terms_condition"><![CDATA[Terms & Condition]]></string>
     <string name="menu_drawer_open">Drawer Open</string>
     <string name="menu_drawer_close">Drawer Close</string>
+=======
+    <string name="app_name">Mad_project1.1</string>
+    <string name="btn_review1">Finish review</string>
+    <string name="textView5">Users want to see more reviews.
+        please rate and review the recent services you\'ve got
+    </string>
+    <string name="btn_review2">Write a review</string>
+    <string name="et_Date12">MM/ DD/YY</string>
+    <string name="et_Date1">11/08/2021</string>
+    <string-array name="category">
+        <item>Category</item>
+        <item>Plumber</item>
+        <item>Mason</item>
+        <item>Electrician</item>
+        <item>Carpenter</item>
+    </string-array>
+>>>>>>> origin/review-and-rating
 </resources>
