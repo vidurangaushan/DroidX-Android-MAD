@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "DroidX-MAD"
+rootProject.name = "Mad_project1.1"
 include ':app'
