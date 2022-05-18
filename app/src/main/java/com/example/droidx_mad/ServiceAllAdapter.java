@@ -70,13 +70,13 @@ public class ServiceAllAdapter extends FirebaseRecyclerAdapter<ServiceAll,Servic
 
                 View view = dialogPlus.getHolderView();
 
-                EditText name = view.findViewById(R.id.sername);
-                EditText email = view.findViewById(R.id.seremail);
-                EditText telephone = view.findViewById(R.id.sertel);
-                EditText city = view.findViewById(R.id.sercity);
-                EditText category = view.findViewById(R.id.sercategory);
+                EditText name = view.findViewById(R.id.upname);
+                EditText email = view.findViewById(R.id.upemail);
+                EditText telephone = view.findViewById(R.id.uptelephone);
+                EditText city = view.findViewById(R.id.upcity);
+                EditText category = view.findViewById(R.id.upcategory);
 
-                Button serupdate = view.findViewById(R.id.serupdate);
+                Button serupdate = view.findViewById(R.id.upbutton);
 
                 name.setText(model.getName());
                 email.setText(model.getEmail());
