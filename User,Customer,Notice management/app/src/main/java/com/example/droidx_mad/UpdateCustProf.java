@@ -5,44 +5,92 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/*
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+*/
+import java.util.HashMap;
 
 public class UpdateCustProf extends AppCompatActivity {
-
+/*
     EditText txtfname, txtlname, txtemail, txtaddress, txtcontactNumber;
     Button updatebtn;
     DatabaseReference dbRef;
     CustAccounts custObj;
 
 
-
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_cust_prof);
         setTitle("Update Profile");
 
-        txtfname=findViewById(R.id.fname);
-        txtlname=findViewById(R.id.lname);
-        txtemail=findViewById(R.id.email);
-        txtaddress=findViewById(R.id.address);
-        txtcontactNumber=findViewById(R.id.phone);
-        custObj = new CustAccounts();
+        final EditText fname=findViewById(R.id.fname);
+        final EditText lname=findViewById(R.id.lname);
+        final EditText email=findViewById(R.id.email);
+        final EditText address=findViewById(R.id.address);
+        final EditText phone=findViewById(R.id.phone);
+        Button btn = findViewById(R.id.updatebtn);
+        Button btn1 = findViewById(R.id.deletebtn);
+        DBCustomer dbc = new DBCustomer();
+        btn.setOnClickListener(v->
+        {
+           /* CustAccounts cstA = new CustAccounts(fname.getText().toString(),lname.getText().toString(),email.getText().toString(),address.getText().toString(),phone.getText().toString());
+            dbc.add(cstA).addOnSuccessListener(suc->
+            {
+                Toast.makeText(this, "Customer is updated",Toast.LENGTH_SHORT).show();
 
+            }).addOnFailureListener(er->{
+                Toast.makeText(this,""+er.getMessage(),Toast.LENGTH_SHORT).show();
+            });*/
+            HashMap<String , Object>hashMap = new HashMap<>();
+            hashMap.put("fname",fname.getText().toString());
+            hashMap.put("lname",lname.getText().toString());
+            hashMap.put("email",email.getText().toString());
+            hashMap.put("address",address.getText().toString());
+            hashMap.put("phone",phone.getText().toString());
+            dbc.update("",hashMap).addOnSuccessListener(suc->
+            {
+                Toast.makeText(this, "Customer is updated",Toast.LENGTH_SHORT).show();
 
+            }).addOnFailureListener(er->{
+                Toast.makeText(this,""+er.getMessage(),Toast.LENGTH_SHORT).show();
+            });
 
+        });
+        //custObj = new CustAccounts();
+        btn1.setOnClickListener(v->
+        {
+           /* CustAccounts cstA = new CustAccounts(fname.getText().toString(),lname.getText().toString(),email.getText().toString(),address.getText().toString(),phone.getText().toString());
+            */
+            HashMap<String , Object>hashMap = new HashMap<>();
+            hashMap.put("fname",fname.getText().toString());
+            hashMap.put("lname",lname.getText().toString());
+            hashMap.put("email",email.getText().toString());
+            hashMap.put("address",address.getText().toString());
+            hashMap.put("phone",phone.getText().toString());
+            dbc.remove("").addOnSuccessListener(suc->
+            {
+                Toast.makeText(this, "Customer is removed",Toast.LENGTH_SHORT).show();
 
+            }).addOnFailureListener(er->{
+                Toast.makeText(this,""+er.getMessage(),Toast.LENGTH_SHORT).show();
+            });
+
+        });
 
     }
+    /*
    public void UpdateData(View v){
         DatabaseReference updRef= FirebaseDatabase.getInstance().getReference().child("CustAccounts");
         updRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -79,10 +127,21 @@ public class UpdateCustProf extends AppCompatActivity {
         txtemail.setText("");
         txtaddress.setText("");
         txtcontactNumber.setText("");
+    }*/
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main,menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     public void Onsend(View view) {
         view = findViewById(R.id.updatebtn);
         startActivity(new Intent(UpdateCustProf.this,CustHome.class) );
+    }
+
+    public void send(View view) {
+        view = findViewById(R.id.deletebtn);
+        startActivity(new Intent( UpdateCustProf.this, CustHome.class));
     }
 }

@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-       /* loginbtn.setOnClickListener(new View.OnClickListener() {
+       loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent myintent = new Intent(MainActivity.this, Userhome.class);
@@ -35,13 +35,22 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Please enter your username and password", Toast.LENGTH_SHORT).show();
                 }
             }
-        });*/
+        });
     }
 
     public void Onsend(View view) {
         view = findViewById(R.id.loginbtn);
-        startActivity(new Intent (MainActivity.this,Customer.class) );
+        startActivity(new Intent (MainActivity.this,Userhome.class) );
     }
 
 
+    public void send(View view) {
+        view = findViewById(R.id.signupbtn);
+        startActivity(new Intent( MainActivity.this, SignupActivity.class));
+    }
+
+    public void next(View view) {
+        view = findViewById(R.id.imglogbtn);
+        startActivity(new Intent( MainActivity.this, Userhome.class));
+    }
 }

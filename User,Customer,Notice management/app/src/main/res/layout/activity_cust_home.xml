@@ -8,7 +8,7 @@
 
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/updateprof"
         android:layout_width="199dp"
         android:layout_height="84dp"
         android:layout_marginTop="236dp"
@@ -19,16 +19,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/deleteprof"
         android:layout_width="199dp"
         android:layout_height="84dp"
         android:background="@drawable/button_rounded"
-        android:text="Delete Your Profile"
+        android:text="View Notices"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.22" />
+        app:layout_constraintTop_toBottomOf="@+id/updateprof"
+        app:layout_constraintVertical_bias="0.22"
+        android:onClick="send"
+        tools:ignore="OnClick" />
 
     <com.google.android.material.tabs.TabLayout
         android:layout_width="409dp"
@@ -37,7 +39,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/deleteprof"
         app:layout_constraintVertical_bias="1.0">
 
         <com.google.android.material.tabs.TabItem

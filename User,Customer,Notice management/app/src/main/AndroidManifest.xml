@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.droidx_mad">
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DroidXMAD">
+        <activity
+            android:name=".view"
+            android:exported="false" />
         <activity
             android:name=".UpdateCustProf"
             android:exported="false" />
@@ -22,13 +26,10 @@
             android:name=".Addnotice"
             android:exported="false" />
         <activity
-            android:name=".Notice"
-            android:exported="false" />
-        <activity
             android:name=".Customer"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".SignupActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

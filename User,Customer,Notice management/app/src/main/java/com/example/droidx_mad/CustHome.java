@@ -22,7 +22,7 @@ public class CustHome extends AppCompatActivity {
         setContentView(R.layout.activity_cust_home);
         setTitle("Edit Profile");
 
-        Button button = (Button) findViewById(R.id.button2);
+        Button button = (Button) findViewById(R.id.updateprof);
         //admin & admin
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -33,5 +33,11 @@ public class CustHome extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+    }
+
+    public void send(View v) {
+        Intent intent = new Intent( CustHome.this, Notiview.class);
     }
 }

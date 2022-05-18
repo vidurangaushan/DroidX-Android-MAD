@@ -16,11 +16,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SignupActivity extends AppCompatActivity {
-
+    /*
     EditText username, email, password;
     Button signbtn;
     User useObj;
     DatabaseReference dbRef;
+     */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -32,17 +33,33 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         setTitle("Sign Up");
-        username = findViewById(R.id.username);
-        email = findViewById(R.id.email);
-        password = findViewById(R.id.password);
-        signbtn=findViewById(R.id.signbtn);
-        useObj = new User();
+        final EditText username = findViewById(R.id.username);
+        final EditText email = findViewById(R.id.email);
+        final EditText password = findViewById(R.id.password);
+        Button btn =findViewById(R.id.signbtn);
+        DBUser dbu = new DBUser();
+        btn.setOnClickListener(v->
+        {
+            User useO = new User(username.getText().toString(),email.getText().toString(),password.getText().toString());
+            dbu.add(useO).addOnSuccessListener(suc->
+            {
+                Toast.makeText(this, "User is signed up",Toast.LENGTH_SHORT).show();
+
+            }).addOnFailureListener(er->{
+                Toast.makeText(this,""+er.getMessage(),Toast.LENGTH_SHORT).show();
+            });
+        });
+        /*useObj = new User();*/
     }
+    /*
     public void ClearControls(){
         username.setText("");
         email.setText("");
         password.setText("");
     }
+    */
+
+    /*
     public void CreateData(View view){
         dbRef = FirebaseDatabase.getInstance().getReference().child("User");
         if(TextUtils.isEmpty(username.getText().toString()))
@@ -60,10 +77,14 @@ public class SignupActivity extends AppCompatActivity {
             ClearControls();
         }
 
-    }
+    }*/
     public void signbtn(View view) {
         view = findViewById(R.id.signbtn);
         startActivity(new Intent (SignupActivity.this,Userhome.class) );
     }
 
+    public void Onsend(View view) {
+        view = findViewById(R.id.imgbtnsign);
+        startActivity(new Intent (SignupActivity.this,Addnotice.class) );
+    }
 }

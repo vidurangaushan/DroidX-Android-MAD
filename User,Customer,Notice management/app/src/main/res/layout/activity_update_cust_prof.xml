@@ -168,8 +168,8 @@
 
     <Button
         android:id="@+id/updatebtn"
-        android:layout_width="139dp"
-        android:layout_height="44dp"
+        android:layout_width="130dp"
+        android:layout_height="47dp"
         android:layout_marginBottom="64dp"
         android:background="@drawable/button_rounded"
         android:backgroundTint="#7821F3"
@@ -177,12 +177,12 @@
         android:onClick="Onsend"
         android:text="Update"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.216"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone"
-        app:layout_constraintVertical_bias="0.657"
         tools:ignore="OnClick" />
 
     <EditText
@@ -243,5 +243,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/custitle"
         app:srcCompat="@drawable/editprofile" />
+
+    <Button
+        android:id="@+id/deletebtn"
+        android:layout_width="130dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="68dp"
+        android:background="@drawable/button_rounded"
+        android:onClick="send"
+        android:text="Delete"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toEndOf="@+id/updatebtn"
+        tools:ignore="OnClick" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

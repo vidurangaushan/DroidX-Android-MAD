@@ -5,9 +5,16 @@ public class CustAccounts {
     private String lname;
     private String email;
     private String address;
-    private Integer contactNumber;
+    private String phone;
 
     public CustAccounts() {}
+    public CustAccounts(String fname, String lname, String email, String address, String phone){
+        this.fname=fname;
+        this.lname=lname;
+        this.email=email;
+        this.address=address;
+        this.phone=phone;
+    }
 
     public String getFname() {
         return fname;
@@ -41,11 +48,11 @@ public class CustAccounts {
         this.address = address;
     }
 
-    public Integer getContactNumber() {
-        return contactNumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setContactNumber(Integer contactNumber) {
-        this.contactNumber = contactNumber;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
